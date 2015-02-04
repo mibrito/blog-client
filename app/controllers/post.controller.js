@@ -1,5 +1,5 @@
 Blog.Controllers
-	.controller('postController',[ '$scope', 'Post',
+	.controller('PostListCtrl',[ '$scope', 'Post',
 		function ($scope, Post) {
 
 			//$scope.post = new Post();
@@ -22,6 +22,14 @@ Blog.Controllers
 	]
 );
 
+Blog.Controllers
+	.controller('PostDetailCtrl', ['$scope', '$routeParams', 'Post',
+		function($scope, $routeParams, Post) {
+			$scope.postId = $routeParams.postId;
+			$scope.post = Post.get({postId: $routeParams.postId});
+		}
+	]
+);
 var _post = {};
 _post.controller = function ($scope,Post) {
 

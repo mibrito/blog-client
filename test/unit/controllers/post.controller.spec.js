@@ -17,7 +17,7 @@ describe("Blog Controllers", function () {
 	beforeEach(module('blog'));
 	beforeEach(module('blog.services'));
 
-	describe("postController", function () {
+	describe("PostListCtrl", function () {
 		var scope,
 			ctrl,
 			$httpBackend;
@@ -26,15 +26,15 @@ describe("Blog Controllers", function () {
 			$httpBackend = _$httpBackend_;
 			$httpBackend.expectGET('http://localhost:3000/posts').
 				respond([{
-					"content":"Esse e o conteudo do meu post",
-					"title":"Novo Post de Teste",
+					"content":"conteudo 1",
+					"title":"post 1",
 					"_id":"54ccb3adbc017e9b3d3fadce",
 					"__v":0,
 					"created_at":"2015-01-31T10:51:25.838Z"
 				}]);
 
 			scope = $rootScope.$new();
-			ctrl = $controller('postController', {$scope: scope});
+			ctrl = $controller('PostListCtrl', {$scope: scope});
 		}));
 
 
@@ -45,8 +45,8 @@ describe("Blog Controllers", function () {
 
 			expect(scope.posts).toEqualData(
 				[{
-					"content":"Esse e o conteudo do meu post",
-					"title":"Novo Post de Teste",
+					"content":"conteudo 1",
+					"title":"post 1",
 					"_id":"54ccb3adbc017e9b3d3fadce",
 					"__v":0,
 					"created_at":"2015-01-31T10:51:25.838Z"
