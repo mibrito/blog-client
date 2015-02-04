@@ -1,30 +1,95 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/home/mibrito/.nvm/v0.11.14/bin/node',
-1 verbose cli   '/home/mibrito/.nvm/v0.11.14/bin/npm',
-1 verbose cli   'test' ]
+1 verbose cli [ '/home/michele/.nvm/v0.11.14/bin/node',
+1 verbose cli   '/home/michele/.nvm/v0.11.14/bin/npm',
+1 verbose cli   'i',
+1 verbose cli   '-g',
+1 verbose cli   'protractor-chrome' ]
 2 info using npm@2.0.0
 3 info using node@v0.11.14
-4 verbose stack Error: Failed to parse json
-4 verbose stack Unexpected string
-4 verbose stack     at parseError (/home/mibrito/.nvm/v0.11.14/lib/node_modules/npm/node_modules/read-package-json/read-json.js:378:25)
-4 verbose stack     at parseJson (/home/mibrito/.nvm/v0.11.14/lib/node_modules/npm/node_modules/read-package-json/read-json.js:85:51)
-4 verbose stack     at /home/mibrito/.nvm/v0.11.14/lib/node_modules/npm/node_modules/read-package-json/read-json.js:59:33
-4 verbose stack     at evalmachine.<anonymous>:295:14
-4 verbose stack     at /home/mibrito/.nvm/v0.11.14/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:102:5
-4 verbose stack     at Object.oncomplete (evalmachine.<anonymous>:93:15)
-5 verbose cwd /home/mibrito/Documentos/vgi/blog/blog-client
-6 error Linux 3.13.0-44-generic
-7 error argv "/home/mibrito/.nvm/v0.11.14/bin/node" "/home/mibrito/.nvm/v0.11.14/bin/npm" "test"
-8 error node v0.11.14
-9 error npm  v2.0.0
-10 error file /home/mibrito/Documentos/vgi/blog/blog-client/package.json
-11 error code EJSONPARSE
-12 error Failed to parse json
-12 error Unexpected string
-13 error File: /home/mibrito/Documentos/vgi/blog/blog-client/package.json
-14 error Failed to parse package.json data.
-14 error package.json must be actual JSON, not just JavaScript.
-14 error
-14 error This is not a bug in npm.
-14 error Tell the package author to fix their package.json file. JSON.parse
-15 verbose exit [ 1, true ]
+4 verbose cache add [ 'protractor-chrome', null ]
+5 verbose cache add spec="protractor-chrome" args=["protractor-chrome",null]
+6 verbose parsed spec { raw: 'protractor-chrome',
+6 verbose parsed spec   scope: null,
+6 verbose parsed spec   name: 'protractor-chrome',
+6 verbose parsed spec   rawSpec: '',
+6 verbose parsed spec   spec: '*',
+6 verbose parsed spec   type: 'range' }
+7 verbose parsed spec { raw: 'protractor-chrome',
+7 verbose parsed spec   scope: null,
+7 verbose parsed spec   name: 'protractor-chrome',
+7 verbose parsed spec   rawSpec: '',
+7 verbose parsed spec   spec: '*',
+7 verbose parsed spec   type: 'range' }
+8 verbose addNamed [ 'protractor-chrome', '*' ]
+9 verbose addNamed [ null, '*' ]
+10 silly lockFile 6654c09e-protractor-chrome protractor-chrome@*
+11 verbose lock protractor-chrome@* /home/michele/.npm/6654c09e-protractor-chrome.lock
+12 silly addNameRange { name: 'protractor-chrome', range: '*', hasData: false }
+13 verbose mapToRegistry name protractor-chrome
+14 verbose mapToRegistry uri https://registry.npmjs.org/protractor-chrome
+15 verbose request on initialization, where is /protractor-chrome
+16 verbose request after pass 1, where is /protractor-chrome
+17 verbose request url raw /protractor-chrome
+18 verbose request resolving registry [ 'https://registry.npmjs.org/', './protractor-chrome' ]
+19 verbose request after pass 2, where is https://registry.npmjs.org/protractor-chrome
+20 verbose request no auth needed
+21 info attempt registry request try #1 at 13:00:09
+22 verbose request id 589234e279a4f725
+23 http request GET https://registry.npmjs.org/protractor-chrome
+24 http 404 https://registry.npmjs.org/protractor-chrome
+25 verbose headers { date: 'Wed, 04 Feb 2015 15:00:10 GMT',
+25 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+25 verbose headers   'content-type': 'application/json',
+25 verbose headers   'cache-control': 'max-age=0',
+25 verbose headers   'content-length': '52',
+25 verbose headers   'accept-ranges': 'bytes',
+25 verbose headers   via: '1.1 varnish',
+25 verbose headers   age: '0',
+25 verbose headers   'x-served-by': 'cache-jfk1032-JFK',
+25 verbose headers   'x-cache': 'MISS',
+25 verbose headers   'x-cache-hits': '0',
+25 verbose headers   'x-timer': 'S1423062010.163798,VS0,VE19',
+25 verbose headers   connection: 'close' }
+26 silly registry.get cb [ 404,
+26 silly registry.get   { date: 'Wed, 04 Feb 2015 15:00:10 GMT',
+26 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+26 silly registry.get     'content-type': 'application/json',
+26 silly registry.get     'cache-control': 'max-age=0',
+26 silly registry.get     'content-length': '52',
+26 silly registry.get     'accept-ranges': 'bytes',
+26 silly registry.get     via: '1.1 varnish',
+26 silly registry.get     age: '0',
+26 silly registry.get     'x-served-by': 'cache-jfk1032-JFK',
+26 silly registry.get     'x-cache': 'MISS',
+26 silly registry.get     'x-cache-hits': '0',
+26 silly registry.get     'x-timer': 'S1423062010.163798,VS0,VE19',
+26 silly registry.get     connection: 'close' } ]
+27 silly lockFile 6654c09e-protractor-chrome protractor-chrome@*
+28 silly lockFile 6654c09e-protractor-chrome protractor-chrome@*
+29 verbose stack Error: 404 Not Found: protractor-chrome
+29 verbose stack     at RegClient.<anonymous> (/home/michele/.nvm/v0.11.14/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:259:14)
+29 verbose stack     at Request._callback (/home/michele/.nvm/v0.11.14/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:198:65)
+29 verbose stack     at Request.self.callback (/home/michele/.nvm/v0.11.14/lib/node_modules/npm/node_modules/request/request.js:236:22)
+29 verbose stack     at Request.emit (events.js:110:17)
+29 verbose stack     at Request.<anonymous> (/home/michele/.nvm/v0.11.14/lib/node_modules/npm/node_modules/request/request.js:1142:14)
+29 verbose stack     at Request.emit (events.js:129:20)
+29 verbose stack     at IncomingMessage.<anonymous> (/home/michele/.nvm/v0.11.14/lib/node_modules/npm/node_modules/request/request.js:1096:12)
+29 verbose stack     at IncomingMessage.emit (events.js:129:20)
+29 verbose stack     at _stream_readable.js:907:16
+29 verbose stack     at process._tickCallback (node.js:372:11)
+30 verbose statusCode 404
+31 verbose pkgid protractor-chrome
+32 verbose cwd /home/michele/Documentos/vgi/blog/blog-client
+33 error Linux 3.13.0-45-generic
+34 error argv "/home/michele/.nvm/v0.11.14/bin/node" "/home/michele/.nvm/v0.11.14/bin/npm" "i" "-g" "protractor-chrome"
+35 error node v0.11.14
+36 error npm  v2.0.0
+37 error code E404
+38 error 404 Not Found: protractor-chrome
+38 error 404
+38 error 404 'protractor-chrome' is not in the npm registry.
+38 error 404 You should bug the author to publish it (or use the name yourself!)
+38 error 404
+38 error 404 Note that you can also install from a
+38 error 404 tarball, folder, http url, or git url.
+39 verbose exit [ 1, true ]

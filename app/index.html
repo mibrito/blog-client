@@ -8,9 +8,21 @@
 
 		<!-- CSS -->
 		<link rel="stylesheet" type="text/css" href="./libs/bootstrap/dist/css/bootstrap.min.css"/>
+
+		<!-- JS -->
+		<script src="./libs/angular/angular.min.js"></script>
+		<script src="./libs/angular-resource/angular-resource.min.js"></script>
+		<script src="./libs/angular-route/angular-route.min.js"></script>
+
+		<!-- CUSTOM JS -->
+		<script type="text/javascript" src="./blog.js"></script>
+		<script type="text/javascript" src="./controllers/post.controller.js"></script>
+		<script type="text/javascript" src="./services/post.service.js"></script>
+		<script type="text/javascript" src="./blog.routes.js"></script>
 	</head>
 	<body>
-		<nav class="navbar navbar-default" role="navigation">
+		<div ng-view></div>
+		<!--nav class="navbar navbar-default" role="navigation">
 			<div class="container-fluid">
 				<div class="navbar-header">
 					<a class="navbar-brand" href="/">Blog App</a>
@@ -25,20 +37,10 @@
 		<div class="container">
 			<div class="row top-buffer">
 				<div class="col-xs-8 col-xs-offset-2">
-					<div ng-view></div> <!-- This is where our views will load -->
+					<div ng-view></div> < This is where our views will load >
 				</div>
 			</div>
-		</div>
+		</div-->
 
-		<!-- JS -->
-		<script src="./libs/angular/angular.min.js"></script>
-		<script src="./libs/angular-resource/angular-resource.min.js"></script>
-		<script src="./libs/angular-route/angular-route.min.js"></script>
-
-		<!-- CUSTOM JS -->
-		<script type="text/javascript" src="./blog.js"></script>
-		<script type="text/javascript" src="./controllers/post.controller.js"></script>
-		<script type="text/javascript" src="./services/post.service.js"></script>
-		<script type="text/javascript" src="./blog.routes.js"></script>
 	</body>
 </html>
