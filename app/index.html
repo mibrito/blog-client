@@ -8,6 +8,7 @@
 
 		<!-- CSS -->
 		<link rel="stylesheet" type="text/css" href="./libs/bootstrap/dist/css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="./assets/css/blog.css"/>
 
 		<!-- JS -->
 		<script src="./libs/angular/angular.min.js"></script>
@@ -17,30 +18,23 @@
 		<!-- CUSTOM JS -->
 		<script type="text/javascript" src="./blog.js"></script>
 		<script type="text/javascript" src="./controllers/post.controller.js"></script>
+		<script type="text/javascript" src="./controllers/login.controller.js"></script>
 		<script type="text/javascript" src="./services/post.service.js"></script>
 		<script type="text/javascript" src="./blog.routes.js"></script>
 	</head>
 	<body>
-		<div ng-view></div>
-		<!--nav class="navbar navbar-default" role="navigation">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					<a class="navbar-brand" href="/">Blog App</a>
-				</div>
-				<div class="collapse navbar-collapse">
-					<ul class="nav navbar-nav">
-						<li><a href="posts">Posts</a></li>
-					</ul>
-				</div>
+		<div class="blog-masthead">
+			<div class="container">
+				<nav class="blog-nav">
+					<a class="blog-nav-item active" href="#/posts">Home</a>
+					<a class="blog-nav-item" href="#/login">New features</a>
+					<a class="blog-nav-item" href="#">Press</a>
+					<a class="blog-nav-item" href="#">New hires</a>
+					<a class="blog-nav-item" href="#">About</a>
+				</nav>
 			</div>
-		</nav>
-		<div class="container">
-			<div class="row top-buffer">
-				<div class="col-xs-8 col-xs-offset-2">
-					<div ng-view></div> < This is where our views will load >
-				</div>
-			</div>
-		</div-->
+		</div>
 
+			<div ng-view></div>
 	</body>
 </html>
