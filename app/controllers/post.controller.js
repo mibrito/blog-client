@@ -1,6 +1,6 @@
 Blog.Controllers
-	.controller('PostListCtrl',[ '$scope', 'Post',
-		function ($scope, Post) {
+	.controller('PostListCtrl',[ '$scope', '$location', 'Post',
+		function ($scope, $location , Post) {
 
 			//$scope.post = new Post();
 			$scope.posts = Post.query();
@@ -17,6 +17,10 @@ Blog.Controllers
 			$scope.delete = function (post) {
 				Post.delete(post);
 				_.remove($scope.posts, post);
+			};
+
+			$scope.logout = function(){
+				$location.path('/login');
 			};
 		}
 	]
